@@ -1,0 +1,68 @@
+### ----------------------------------------------------------------------------
+# MINIMUM TECHNICAL REQUIREMENTS
+### ----------------------------------------------------------------------------
+
+# 1) The computer should pick 3 random images
+# 2) Display the random pictures near the top of the stage, with differen x values
+# 3) Show the user's input at the bottom of the page. You can use a display from Data, or 
+#    a Text box from Shapes. 
+#    Hint: Use either a random choice or randint in your program!
+
+kid = codesters.Sprite("person9", 0, -150)
+
+kid.say("")
+
+stage.wait(2)
+
+kid.say("Write a short story about the pictures that appear on the screen. Get creative!")
+
+stage.wait(2)
+
+kid.say("Ready?")
+
+stage.wait(3)
+
+kid.hide()
+
+pic1 = ["zombie2","superhero1","ghost","person6","pinetree4","microphone"]
+
+pic2 = ["purpleguy","bike","applecore","smallhouse","trophy","kitten"]
+
+pic3 = ["ufo","pig","person8","skeleton","toucan","lilypad"]
+
+random_pic = pic1 + pic2 + pic3
+
+image = random.choice(random_pic)
+
+image2 = random.choice(random_pic)
+
+image3 = random.choice(random_pic)
+
+story_image = codesters.Sprite(image,-184,33)
+
+stage.wait(.5)
+
+story_image = codesters.Sprite(image2,-9, 139)
+
+stage.wait(.5)
+
+story_image = codesters.Sprite(image3,135, 94)
+
+stage.wait(.5)
+
+kid = codesters.Sprite("person9", 0, -150)
+
+kid.say("Now it is your turn to get creative! Use the text box to write a story no more than 3 sentences long.")
+
+stage.wait(2)
+
+kid.hide()
+
+user_story = kid.ask("Type Your Story Below")
+
+#my_display = codesters.Display(my_var, x, y)
+
+my_story = codesters.Display(user_story, 3,-127)
+
+
+
